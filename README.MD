@@ -120,9 +120,29 @@ git push -u origin master --tags (push our changes)
 
 git clone ssh url <local folder name>
 
+git pull origin master
+
+git branch -r (to see remote branches)
+
+
+-----------------Branch off a branch-------------------
+git checkout -b MyFeature dev
+git commit -am "my changes in myfeature branch"
+git checkout dev
+git merge --no-ff MyFeature
+
+now push changes to the server
+git push origin dev
+git push origin myFeature
+
+
 Create SSH Key
 ----------------------------------
 
 ssh-keygen -t rsa -C "<youremail>" - Give folder path to store the keys
 
 ssh -T git@github.com
+
+------------------------------
+git clone git@github.com:sveeraraman/rn-guesswho.git
+git remote -v
